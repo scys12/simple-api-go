@@ -1,8 +1,6 @@
 # Simple REST API Golang
 
 ## Requirement ##
-#
-
 ```go
 go get github.com/dgrijalva/jwt-go
 go get github.com/globalsign/mgo
@@ -10,8 +8,6 @@ go get github.com/gorilla/mux
 ```
 
 ## Installation & Run ##
-#
-
 ```go
 go get github.com/scys12/simple-api-go
 ```
@@ -21,12 +17,14 @@ Before you run the application, you should configure your MongoDB configuration 
 ```go
 const (
 	host   = "127.0.0.1:27017"
-	source = "admin"
-	user   = "user"
-	pass   = "123456"
+	source = ""
+	user   = ""
+	pass   = ""
 )
-
 ```
+
+More configuration about MongoDB driver, see [mgo](https://github.com/globalsign/mgo)
+
 After that you could build and run the application
 ```go
 go build
@@ -35,7 +33,6 @@ go build
 The application will run on http://127.0.0.1:8080
 
 ## API ##
-#
 /books
 * ```GET``` : Get All Books
 * ```POST``` : Post a Book
@@ -52,7 +49,6 @@ The application will run on http://127.0.0.1:8080
 * ```POST``` : Register an account
 
 ## Authentication ##
-#
  Once you login, you will get the token authentication. Put in Authorization header
  ```go 
  Authorization : Bearer [token_authentication]
