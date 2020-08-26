@@ -7,10 +7,11 @@ import (
 )
 
 const (
-	host   = "127.0.0.1:27017"
-	source = "admin"
-	user   = "user"
-	pass   = "123456"
+	host     = "127.0.0.1:27017"
+	source   = "admin"
+	user     = ""
+	pass     = ""
+	database = "admin"
 )
 
 var globalS *mgo.Session
@@ -18,7 +19,7 @@ var globalS *mgo.Session
 func init() {
 	dialInfo := &mgo.DialInfo{
 		Addrs:    []string{host},
-		Source:   source,
+		Database: database,
 		Username: user,
 		Password: pass,
 	}
